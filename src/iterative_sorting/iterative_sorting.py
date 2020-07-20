@@ -4,10 +4,12 @@ def selection_sort(arr):
     # for i in range(0, len(arr) - 1):
     #     cur_index = i
     #     smallest_index = cur_index
+
+    # loop through n-1 elements
     for i in range(len(arr)-1): # for each element in the array, starting at the first index and finishing at the last index
         smallest_index = i # declare that the smallest index is the current index's value ("grab the first element so we can compare later")
         # TO-DO: find next smallest element
-        for j in range(i+1, len(arr)): # loop through the remainder of the array, starting with the NEXT element and finishing with the last element
+        for j in range(i+1, len(arr)): # loop through the remainder of the array, starting with the next element and finishing with the last element
             if arr[j] < arr[smallest_index]: # if the element is less than the smallest index element 
                 smallest_index = j # then make the smallest element that element
         # TO-DO: swap
@@ -18,9 +20,9 @@ def selection_sort(arr):
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort(arr):
     for i in range(len(arr)): # loop through the array
-        for j in range(len(arr)-1): # loop through the array, leave off the last index (because we don't want to loop on that one)
-            if arr[j] > arr[j+1]: # if the first element is bigger than the second element
-                arr[j], arr[j+1] = arr[j+1], arr[j] # then swap the elements
+        for j in range(len(arr)-1): # loop through the array, that will leave off the last index, we don't want to loop on the last index 
+            if arr[j] > arr[j+1]: # this is if the first element is bigger than the second element
+                arr[j], arr[j+1] = arr[j+1], arr[j] # swap the elements
     return arr 
 
 '''
